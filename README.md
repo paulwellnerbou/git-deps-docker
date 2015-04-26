@@ -1,6 +1,6 @@
 # git-deps-docker
 
-Docker file for git-deps server and command line
+Docker file for https://github.com/aspiers/git-deps server and command line
 
 # Start git-deps server
 
