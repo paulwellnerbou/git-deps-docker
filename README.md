@@ -4,7 +4,7 @@ Docker file for git-deps server and command line
 
 # Start git-deps server
 
-Just execute the <code>run.sh /absolute/path/to/your/git/repo</code>. This script will build and run the docker image
+Just execute the <code>./run.sh /absolute/path/to/your/git/repo</code>. This script will build and run the docker image
 with the git repository under the given location. The server will be reachable on <code>http://localhost:5000</code>
 
 # Use git-deps command line
