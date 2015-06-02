@@ -6,8 +6,15 @@ RUN apt-get update && apt-get install -y \
 RUN pip install pygit2
 RUN pip install flask
 
+ENV DATE 2015-06-02
+
 # Cloning git-deps and resetting to a known working revision, compatible with this Dockerfile
-RUN git clone https://github.com/aspiers/git-deps.git && cd git-deps && git reset --hard 3d8f8952cd127dc1a33c910a833de328d657a7cb
+# This step might be cached, so use --no-cache building the image or change the date environment variable to now
+RUN git clone https://github.com/aspiers/git-deps.git
+
+# Nailing git-deps down to a known working revision if you want to be sure
+# RUN cd git-deps && git reset --hard bfcfc1663a7cb4eb8110b4fc39a150724f4b22ba
+
 RUN ln -s $PWD/git-deps/git-deps /usr/bin/git-deps
 
 RUN npm install -g browserify
