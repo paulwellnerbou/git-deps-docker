@@ -3,7 +3,7 @@ MAINTAINER Paul Wellner Bou "<paul@wellnerbou.de>"
 
 RUN apt-get update && apt-get install -y \
         vim less git-core python-dev python-pip libgit2-dev gawk libffi-dev npm net-tools
-RUN pip install pygit2
+RUN pip install pygit2==0.22.1
 RUN pip install flask
 
 ENV DATE 2015-06-02
