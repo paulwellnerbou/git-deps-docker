@@ -4,7 +4,7 @@ Docker file for https://github.com/aspiers/git-deps server and command line
 
 # Start git-deps server
 
-Just execute the <code>./run.sh /absolute/path/to/your/git/repo</code>. This script will build and run the docker image
+Just execute the `./run.sh /absolute/path/to/your/git/repo</code>`. This script will build and run the docker image
 with the git repository under the given location. The server will be reachable on <code>http://localhost:5000</code>
 
 # Use git-deps command line
@@ -23,7 +23,9 @@ docker run --rm -t -i -p 5000:5000 -v /absolute/path/to/your/git/repo:/src --nam
 
 # Motivation
 
-As in Ubuntu 14.10 it is not trivial to install git-deps because of the python dependencies (especially
+As in Ubuntu 14.10 it was not trivial to install git-deps because of the python dependencies (especially
 libgit2 >=0.22), I created this Dockerfile, based on ubuntu 15.04, which brings libgit2 0.22 out of
 the box.
 
+Now the versions and the dependency problems changed, but still it is not always eas to get it running on your system, so
+consider this as a running reference setup.
