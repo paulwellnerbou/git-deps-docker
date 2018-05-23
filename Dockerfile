@@ -1,7 +1,7 @@
 FROM python:3-slim-stretch
 MAINTAINER Paul Wellner Bou "<paul@wellnerbou.de>"
 
-RUN apt-get update && apt-get install -y git-core node-browserify-lite libgit2-24 libgit2-dev build-essential
+RUN apt-get update && apt-get install -y git-core libgit2-24 libgit2-dev build-essential
 RUN pip install pygit2==0.24 git-deps
 
 RUN mkdir -p /src
