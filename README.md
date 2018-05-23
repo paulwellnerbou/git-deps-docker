@@ -4,8 +4,16 @@ Docker file for https://github.com/aspiers/git-deps server and command line
 
 # Start git-deps server
 
-Just execute the `./run.sh /absolute/path/to/your/git/repo</code>`. This script will build and run the docker image
-with the git repository under the given location. The server will be reachable on <code>http://localhost:5000</code>
+Just execute the `./run.sh /absolute/path/to/your/git/repo`. This script will build and run the docker image
+with the git repository under the given location. The server will be reachable on http://localhost:5000
+
+As a reference, there is a `docker-compose.yml` included which opens `git-deps` for this repository. So a simple
+
+```
+docker-compose up
+```
+
+will start the container and the git-deps server under http://localhost:5000.
 
 # Use git-deps command line
 
